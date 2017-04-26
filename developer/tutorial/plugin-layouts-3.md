@@ -73,8 +73,9 @@ layout: [{
   collection: "Products",
   theme: "default",
   enabled: true,
+  priority: 1,
   structure: {
-    template: "products",
+    template: "productsLanding",
     layoutHeader: "layoutHeader",
     layoutFooter: "layoutFooter",
     notFound: "productNotFound",
@@ -99,10 +100,11 @@ Reaction.registerPackage({
   autoEnable: true,
   layout: [{
     layout: "coreLayoutBeesknees",
-    workflow: "coreWorkflow",
+    workflow: "coreProductWorkflow",
     collection: "Products",
     theme: "default",
     enabled: true,
+    priority: 1,
     structure: {
       template: "productsLanding",
       layoutHeader: "layoutHeader",
@@ -119,7 +121,7 @@ Reaction.registerPackage({
 
 You can see we specified several things there. The most important thing was the "layout" record, which refers to the new
 layout template we will create in the next chapter. We also specify which templates we want for the header and footer (we are just keeping the default for now),
-and what's the main template that we render and that's `products`. We also
+and what's the main template that we render and that's `productsLanding`. We also
 specified which template we would use for a "notFound". When we get to the routing and template more of this will make sense.
 
 One important thing to understand is that at any point in time when RC goes to render a route/page it's going to
